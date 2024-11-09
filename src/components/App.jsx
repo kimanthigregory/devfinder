@@ -1,10 +1,12 @@
 import Navigation from "./navigation";
+import InputBox from "./input";
+import "./app.css";
 
 export default function App() {
   return (
-    <div>
+    <main>
       <Navigation />
-      <h1>hello</h1>
-    </div>
+      <InputBox />
+    </main>
   );
 }

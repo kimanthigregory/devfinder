@@ -1,15 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap");
 
-main {
-  width: 600px;
-
+.inputRapper {
+  background-color: rgb(26, 26, 48);
   padding: 1rem;
-}
-
-h2,
-h3,
-p,
-time {
-  color: #fff;
-  font-family: "Sofia Sans", sans-serif;
 }
