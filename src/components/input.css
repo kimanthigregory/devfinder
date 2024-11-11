@@ -2,5 +2,53 @@
 
 .inputRapper {
   background-color: rgb(26, 26, 48);
-  padding: 1rem;
+  /* padding: 1rem; */
+}
+
+form {
+  background-color: #1d2842;
+  font-family: "Sofia Sans", sans-serif;
+  font-weight: 300;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 5px;
+  padding: 0 10px 0 15px;
+}
+
+input {
+  height: 2rem;
+  width: 460px;
+  font-size: 1.2rem;
+  border: none;
+  background-color: #1d2842;
+  color: #fff;
+  font-family: inherit;
+}
+
+input:focus {
+  outline: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.searchButton {
+  width: 5rem;
+  height: 2rem;
+  background-color: #304db8;
+  border: none;
+  border-radius: inherit;
+  font-family: inherit;
+  font-size: 1rem;
+  color: #fff;
+}
+.notFound {
+  color: white;
+  font-family: "Sofia Sans", sans-serif;
+  text-align: center;
 }

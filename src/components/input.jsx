@@ -32,19 +32,24 @@ export default function InputBox() {
           search
         </button>
       </form>
-      <DevInfo
-        name={userInfo.name}
-        userName={userInfo.login}
-        joinDate={userInfo.created_at}
-        bio={userInfo.bio}
-        repos={userInfo.public_repos}
-        followers={userInfo.followers}
-        following={userInfo.following}
-        location={userInfo.location}
-        links={userInfo.blog}
-        twiter={userInfo.twitter_username}
-        company={userInfo.company}
-      />
+      {userInfo.status == 404 || userInfo == [] ? (
+        <h1 className="notFound">user no found</h1>
+      ) : (
+        <DevInfo
+          name={userInfo.name}
+          userName={userInfo.login}
+          joinDate={userInfo.created_at}
+          bio={userInfo.bio}
+          repos={userInfo.public_repos}
+          followers={userInfo.followers}
+          following={userInfo.following}
+          location={userInfo.location}
+          links={userInfo.blog}
+          twiter={userInfo.twitter_username}
+          company={userInfo.company}
+          profile={userInfo.avatar_url}
+        />
+      )}
     </main>
   );
 }

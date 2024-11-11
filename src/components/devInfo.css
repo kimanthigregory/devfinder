@@ -1,4 +1,67 @@
 @import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap");
 .section-wrapper {
   background-color: #1d2842;
+  border-radius: 5px;
+  padding: 2rem;
+}
+.section-wrapper {
+  display: flex;
+}
+
+.avatar-wrapper {
+  width: 30%;
+}
+.profile-avatar img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+.profile-avatar {
+  width: 6rem;
+  height: 6rem;
+  display: grid;
+  place-content: center;
+}
+
+aside {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.userName {
+  color: #304db8;
+  margin-block: 0.5rem;
+}
+.allInfo {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.statistics {
+  display: flex;
+  gap: 5rem;
+  padding: 1rem;
+  background-color: #0b192c;
+  border-radius: 5px;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+}
+
+p {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.links-col-one,
+.links-col-two {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  /* gap: ; */
 }

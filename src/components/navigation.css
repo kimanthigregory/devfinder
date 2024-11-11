@@ -1,9 +1,11 @@
 nav {
   display: flex;
   justify-content: space-between;
-  background-color: #1d2842;
 }
 
+h2 {
+  margin: 0;
+}
 .theme-switcher {
   display: flex;
   align-items: center;
