@@ -1,20 +1,25 @@
 import "./input.css";
-import React from "react";
+import React, { useState } from "react";
 import searchIcon from "../assets/search.svg";
 import DevInfo from "./devInfo";
 
 export default function InputBox() {
-  const [userInfo, setUserInfo] = React.useState([]);
+  const [isLoading, SetIsLoading] = useState(false);
+  const [userInfo, setUserInfo] = React.useState(null);
   const [input, setInput] = React.useState("");
   const handleClick = function (event) {
     setInput(event.target.value);
   };
   const handleSubmit = function (event) {
     event.preventDefault();
+    SetIsLoading(true);
 
     fetch(`https://api.github.com/users/${input}`)
       .then((response) => response.json())
-      .then((data) => setUserInfo(data));
+      .then((data) => setUserInfo(data))
+      .finally(() => {
+        SetIsLoading(false);
+      });
   };
   console.log(input);
   console.log(userInfo);
@@ -27,14 +32,13 @@ export default function InputBox() {
           name="usersName"
           value={input}
           onChange={handleClick}
+          spellCheck={false}
         />
-        <button type="submit" className="searchButton">
-          search
+        <button type="submit" disabled={isLoading} className="searchButton">
+          {isLoading ? "sending..." : "send"}
         </button>
       </form>
-      {userInfo.status == 404 || userInfo == [] ? (
-        <h1 className="notFound">user no found</h1>
-      ) : (
+      {userInfo && (
         <DevInfo
           name={userInfo.name}
           userName={userInfo.login}
